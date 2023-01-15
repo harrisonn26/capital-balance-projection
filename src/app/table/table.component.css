@@ -1,10 +1,11 @@
 .projection-table {
   margin: 16px;
   width: calc(100% - 32px);
-  border: 1px solid black;
+  border: 0.25px solid #ccc;
+  border-spacing: 0;
 }
 .projection-table-cell {
   font-size: large;
   padding: 16px;
-  border: 1px solid black;
+  border: 0.25px solid #ccc;
 }
