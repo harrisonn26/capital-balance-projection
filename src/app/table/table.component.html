@@ -17,7 +17,7 @@
       class="projection-table-cell"
       *ngFor="let startBalance of data.startBalance"
     >
-      {{ startBalance | currency }}
+      {{ startBalance | dollar }}
     </td>
   </tr>
   <tr>
@@ -26,25 +26,25 @@
       class="projection-table-cell"
       *ngFor="let contributions of data.contributions"
     >
-      {{ contributions | currency }}
+      {{ contributions | dollar }}
     </td>
   </tr>
   <tr>
     <td class="projection-table-cell">Earnings</td>
     <td class="projection-table-cell" *ngFor="let earnings of data.earnings">
-      {{ earnings | currency }}
+      {{ earnings | dollar }}
     </td>
   </tr>
   <tr>
     <td class="projection-table-cell">Fees</td>
     <td class="projection-table-cell" *ngFor="let fees of data.fees">
-      {{ fees | currency }}
+      {{ fees | dollar }}
     </td>
   </tr>
   <tr>
     <td class="projection-table-cell">Tax</td>
     <td class="projection-table-cell" *ngFor="let tax of data.tax">
-      {{ tax | currency }}
+      {{ tax | dollar }}
     </td>
   </tr>
   <tr>
@@ -53,7 +53,7 @@
       class="projection-table-cell"
       *ngFor="let withdrawals of data.withdrawals"
     >
-      {{ withdrawals | currency }}
+      {{ withdrawals | dollar }}
     </td>
   </tr>
   <tr>
@@ -62,7 +62,7 @@
       class="projection-table-cell"
       *ngFor="let endBalance of data.endBalance"
     >
-      {{ endBalance | currency }}
+      {{ endBalance | dollar }}
     </td>
   </tr>
   <tr></tr>

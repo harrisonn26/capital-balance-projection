@@ -7,9 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { TableComponent } from './table/table.component';
+import { DollarPipe } from './dollar.pipe';
 
 @NgModule({
-  declarations: [AppComponent, TableComponent],
+  declarations: [AppComponent, TableComponent, DollarPipe],
   imports: [
     BrowserModule,
     FormsModule,
