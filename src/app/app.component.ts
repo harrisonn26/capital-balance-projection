@@ -30,10 +30,10 @@ export type TableData = {
 })
 export class AppComponent {
   projectionData: ProjectionData = {
-    age: '45',
-    startBalance: '300000',
-    withdrawalAge: '66',
-    salary: '10000',
+    age: '',
+    startBalance: '0',
+    withdrawalAge: '',
+    salary: '0',
     contributionRate: '9.5',
     inflationRate: '3',
     earnings: '7.5',
@@ -72,32 +72,40 @@ export class AppComponent {
     const date = new Date();
 
     const age = parseFloat(this.projectionData.age);
-    const withdrawalAge = parseFloat(this.projectionData.withdrawalAge);
 
     for (let currentAge = age; currentAge < 100; currentAge++) {
       //currentAge is the age at for the column being calculated
       const i = currentAge - age;
       this.tableData.year.push(date.getFullYear() + currentAge - age);
       this.tableData.age.push(currentAge);
+
+      /*calculate contributions or withdrawals 
+      (contributions and startBalance are calculated differently for the first year )*/
       if (currentAge === age) {
         this.tableData.startBalance.push(
           parseFloat(this.projectionData.startBalance)
         );
+
         this.tableData.contributions.push(
           parseFloat(this.projectionData.salary) *
             (parseFloat(this.projectionData.contributionRate) / 100)
         );
+
         this.tableData.withdrawals.push(0);
       } else {
         this.tableData.startBalance.push(this.tableData.endBalance[i - 1]);
-        if (currentAge < withdrawalAge) {
+
+        //check if the withdrawal age has been reached
+        if (currentAge < parseFloat(this.projectionData.withdrawalAge)) {
           this.tableData.contributions.push(
             this.tableData.contributions[i - 1] *
               (1 + parseFloat(this.projectionData.inflationRate) / 100)
           );
+
           this.tableData.withdrawals.push(0);
         } else {
           this.tableData.contributions.push(0);
+
           this.tableData.withdrawals.push(
             this.tableData.startBalance[i] *
               (parseFloat(this.projectionData.withdrawalRate) / 100)
@@ -105,20 +113,24 @@ export class AppComponent {
         }
       }
 
+      //calculate other table data
       this.tableData.earnings.push(
         (this.tableData.startBalance[i] + this.tableData.contributions[i]) *
           (parseFloat(this.projectionData.earnings) / 100)
       );
+
       this.tableData.fees.push(
         (this.tableData.startBalance[i] +
           this.tableData.contributions[i] +
           this.tableData.earnings[i]) *
           (parseFloat(this.projectionData.fees) / 100)
       );
+
       this.tableData.tax.push(
         (this.tableData.contributions[i] + this.tableData.earnings[i]) *
           (parseFloat(this.projectionData.tax) / 100)
       );
+
       this.tableData.endBalance.push(
         this.tableData.startBalance[i] +
           this.tableData.contributions[i] +
