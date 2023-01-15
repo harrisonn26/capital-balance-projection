@@ -1,1 +1,70 @@
-<mat-toolbar><span>Capital Balance Projection</span></mat-toolbar>
+<mat-toolbar>
+  <span>Capital Balance Projection</span>
+</mat-toolbar>
+
+<div class="inputs">
+  <mat-form-field class="formField">
+    <mat-label>Start Balance</mat-label>
+    <span matTextPrefix>$&nbsp;</span>
+    <input matInput [(ngModel)]="projectionData.startBalance" placeholder="0" />
+  </mat-form-field>
+
+  <mat-form-field class="formField">
+    <mat-label>Withdrawal Age</mat-label>
+    <input matInput [(ngModel)]="projectionData.withdrawalAge" />
+  </mat-form-field>
+
+  <mat-form-field class="formField">
+    <mat-label>Salary</mat-label>
+    <span matTextPrefix>$&nbsp;</span>
+    <input matInput [(ngModel)]="projectionData.salary" placeholder="0" />
+  </mat-form-field>
+
+  <mat-form-field class="formField">
+    <mat-label>Contribution Rate</mat-label>
+    <span matTextSuffix="">%&nbsp;</span>
+    <input
+      matInput
+      [(ngModel)]="projectionData.contributionRate"
+      placeholder="0"
+    />
+  </mat-form-field>
+
+  <mat-form-field class="formField">
+    <mat-label>Withdrawal Rate</mat-label>
+    <span matTextSuffix="">%&nbsp;</span>
+    <input
+      matInput
+      [(ngModel)]="projectionData.withdrawalRate"
+      placeholder="0"
+    />
+  </mat-form-field>
+
+  <mat-form-field class="formField">
+    <mat-label>Inflation Rate</mat-label>
+    <span matTextSuffix="">%&nbsp;</span>
+    <input
+      matInput
+      [(ngModel)]="projectionData.inflationRate"
+      placeholder="0"
+    />
+  </mat-form-field>
+
+  <mat-form-field class="formField">
+    <mat-label>Earnings</mat-label>
+    <span matTextSuffix="">%&nbsp;</span>
+    <input matInput [(ngModel)]="projectionData.earnings" placeholder="0"
+  /></mat-form-field>
+
+  <mat-form-field class="formField">
+    <mat-label>Fees</mat-label>
+    <span matTextSuffix="">%&nbsp;</span>
+    <input matInput [(ngModel)]="projectionData.fees" placeholder="0" />
+  </mat-form-field>
+
+  <mat-form-field class="formField">
+    <mat-label>Tax</mat-label>
+    <span matTextSuffix="">%&nbsp;</span>
+    <input matInput matInput [(ngModel)]="projectionData.tax" placeholder="0" />
+  </mat-form-field>
+</div>

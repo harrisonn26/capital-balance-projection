@@ -24,7 +24,7 @@ export class AppComponent {
     salary: 0,
     contributionRate: 9.5,
     inflationRate: 3,
-    earnings: 7.5,
+    earnings: 75,
     fees: 2,
     tax: 15,
     withdrawalRate: 10,
