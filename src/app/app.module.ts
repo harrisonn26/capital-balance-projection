@@ -6,9 +6,10 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, TableComponent],
   imports: [
     BrowserModule,
     FormsModule,
