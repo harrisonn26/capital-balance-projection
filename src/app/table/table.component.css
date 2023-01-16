@@ -1,11 +1,20 @@
 .projection-table {
   border-spacing: 0;
+  width: 100%;
 }
 .projection-table-cell {
-  font-size: large;
+  font-size: 14px;
   padding: 16px;
-  border: 0.25px solid #ccc;
+  border-bottom: 1px solid #ccc;
   background-color: white;
+}
+.sticky-col {
+  font-weight: bold;
+  border-right: 1px solid #ccc;
+  width: 120px;
+}
+.projection-table-row:hover td {
+  background-color: #eee;
 }
 
 .container {
@@ -14,6 +23,8 @@
   overflow-x: auto;
   position: relative;
   border: 0.25px solid #ccc;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
 }
 .container table td:first-child {
   position: sticky;

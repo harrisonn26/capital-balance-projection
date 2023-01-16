@@ -1,18 +1,18 @@
 <div class="container">
   <table class="projection-table">
-    <tr>
+    <tr class="projection-table-row" class="projection-table-row">
       <td class="projection-table-cell sticky-col">Year</td>
       <td class="projection-table-cell" *ngFor="let year of data.year">
         {{ year }}
       </td>
     </tr>
-    <tr>
+    <tr class="projection-table-row">
       <td class="projection-table-cell sticky-col">Age</td>
       <td class="projection-table-cell" *ngFor="let age of data.age">
         {{ age }}
       </td>
     </tr>
-    <tr>
+    <tr class="projection-table-row">
       <td class="projection-table-cell sticky-col">Start Balance</td>
       <td
         class="projection-table-cell"
@@ -21,7 +21,7 @@
         {{ startBalance | dollar }}
       </td>
     </tr>
-    <tr>
+    <tr class="projection-table-row">
       <td class="projection-table-cell sticky-col">Contributions</td>
       <td
         class="projection-table-cell"
@@ -30,25 +30,25 @@
         {{ contributions | dollar }}
       </td>
     </tr>
-    <tr>
+    <tr class="projection-table-row">
       <td class="projection-table-cell sticky-col">Earnings</td>
       <td class="projection-table-cell" *ngFor="let earnings of data.earnings">
         {{ earnings | dollar }}
       </td>
     </tr>
-    <tr>
+    <tr class="projection-table-row">
       <td class="projection-table-cell sticky-col">Fees</td>
       <td class="projection-table-cell" *ngFor="let fees of data.fees">
         {{ fees | dollar }}
       </td>
     </tr>
-    <tr>
+    <tr class="projection-table-row">
       <td class="projection-table-cell sticky-col">Tax</td>
       <td class="projection-table-cell" *ngFor="let tax of data.tax">
         {{ tax | dollar }}
       </td>
     </tr>
-    <tr>
+    <tr class="projection-table-row">
       <td class="projection-table-cell sticky-col">Withdrawals</td>
       <td
         class="projection-table-cell"
@@ -57,7 +57,7 @@
         {{ withdrawals | dollar }}
       </td>
     </tr>
-    <tr>
+    <tr class="projection-table-row">
       <td class="projection-table-cell sticky-col">End Balance</td>
       <td
         class="projection-table-cell"
@@ -66,6 +66,5 @@
         {{ endBalance | dollar }}
       </td>
     </tr>
-    <tr></tr>
   </table>
 </div>
