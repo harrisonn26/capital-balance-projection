@@ -1,7 +1,30 @@
 .formField {
   margin: 0 8px 0 8px;
-  width: 165px;
+  width: calc(10% - 16px);
 }
 .inputs {
-  margin: 16px;
+  margin: 16px 16px 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1400px) {
+  .formField {
+    width: calc(20% - 16px);
+  }
+}
+@media (max-width: 800px) {
+  .formField {
+    width: calc(25% - 16px);
+  }
+}
+@media (max-width: 600px) {
+  .formField {
+    width: calc(33% - 16px);
+  }
+}
+@media (max-width: 450px) {
+  .formField {
+    width: calc(50% - 16px);
+  }
 }

@@ -1,19 +1,19 @@
 <div class="container">
   <table class="projection-table">
     <tr>
-      <td class="projection-table-cell">Year</td>
+      <td class="projection-table-cell sticky-col">Year</td>
       <td class="projection-table-cell" *ngFor="let year of data.year">
         {{ year }}
       </td>
     </tr>
     <tr>
-      <td class="projection-table-cell">Age</td>
+      <td class="projection-table-cell sticky-col">Age</td>
       <td class="projection-table-cell" *ngFor="let age of data.age">
         {{ age }}
       </td>
     </tr>
     <tr>
-      <td class="projection-table-cell">Start Balance</td>
+      <td class="projection-table-cell sticky-col">Start Balance</td>
       <td
         class="projection-table-cell"
         *ngFor="let startBalance of data.startBalance"
@@ -22,7 +22,7 @@
       </td>
     </tr>
     <tr>
-      <td class="projection-table-cell">Contributions</td>
+      <td class="projection-table-cell sticky-col">Contributions</td>
       <td
         class="projection-table-cell"
         *ngFor="let contributions of data.contributions"
@@ -31,25 +31,25 @@
       </td>
     </tr>
     <tr>
-      <td class="projection-table-cell">Earnings</td>
+      <td class="projection-table-cell sticky-col">Earnings</td>
       <td class="projection-table-cell" *ngFor="let earnings of data.earnings">
         {{ earnings | dollar }}
       </td>
     </tr>
     <tr>
-      <td class="projection-table-cell">Fees</td>
+      <td class="projection-table-cell sticky-col">Fees</td>
       <td class="projection-table-cell" *ngFor="let fees of data.fees">
         {{ fees | dollar }}
       </td>
     </tr>
     <tr>
-      <td class="projection-table-cell">Tax</td>
+      <td class="projection-table-cell sticky-col">Tax</td>
       <td class="projection-table-cell" *ngFor="let tax of data.tax">
         {{ tax | dollar }}
       </td>
     </tr>
     <tr>
-      <td class="projection-table-cell">Withdrawals</td>
+      <td class="projection-table-cell sticky-col">Withdrawals</td>
       <td
         class="projection-table-cell"
         *ngFor="let withdrawals of data.withdrawals"
@@ -58,7 +58,7 @@
       </td>
     </tr>
     <tr>
-      <td class="projection-table-cell">End Balance</td>
+      <td class="projection-table-cell sticky-col">End Balance</td>
       <td
         class="projection-table-cell"
         *ngFor="let endBalance of data.endBalance"
