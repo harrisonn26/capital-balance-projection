@@ -13,8 +13,8 @@ type ProjectionData = {
   withdrawalRate: string;
 };
 export type TableData = {
-  year: Array<number>;
-  age: Array<number>;
+  year: Array<any>;
+  age: Array<any>;
   startBalance: Array<number>;
   contributions: Array<number>;
   earnings: Array<number>;
