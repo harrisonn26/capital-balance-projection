@@ -1,125 +1,125 @@
 <mat-toolbar>
   <span>Capital Balance Projection</span>
 </mat-toolbar>
+<div class="page-wrapper">
+  <div class="inputs">
+    <mat-form-field class="formField">
+      <mat-label>Current Age</mat-label>
+      <input
+        type="number"
+        matInput
+        [(ngModel)]="projectionData.age"
+        (keyup)="calc()"
+        placeholder=""
+      />
+    </mat-form-field>
 
-<div class="inputs">
-  <mat-form-field class="formField">
-    <mat-label>Current Age</mat-label>
-    <input
-      type="number"
-      matInput
-      [(ngModel)]="projectionData.age"
-      (keyup)="calc()"
-      placeholder=""
-    />
-  </mat-form-field>
-  <mat-form-field class="formField">
-    <mat-label>Start Balance</mat-label>
-    <span matTextPrefix>$&nbsp;</span>
-    <input
-      type="number"
-      matInput
-      [(ngModel)]="projectionData.startBalance"
-      (keyup)="calc()"
-      placeholder="0"
-    />
-  </mat-form-field>
+    <mat-form-field class="formField">
+      <mat-label>Withdrawal Age</mat-label>
+      <input
+        type="number"
+        matInput
+        [(ngModel)]="projectionData.withdrawalAge"
+        (keyup)="calc()"
+      />
+    </mat-form-field>
+    <mat-form-field class="formField">
+      <mat-label>Start Balance</mat-label>
+      <span matTextPrefix>$&nbsp;</span>
+      <input
+        type="number"
+        matInput
+        [(ngModel)]="projectionData.startBalance"
+        (keyup)="calc()"
+        placeholder="0"
+      />
+    </mat-form-field>
+    <mat-form-field class="formField">
+      <mat-label>Salary</mat-label>
+      <span matTextPrefix>$&nbsp;</span>
+      <input
+        type="number"
+        matInput
+        [(ngModel)]="projectionData.salary"
+        (keyup)="calc()"
+        placeholder="0"
+      />
+    </mat-form-field>
 
-  <mat-form-field class="formField">
-    <mat-label>Withdrawal Age</mat-label>
-    <input
-      type="number"
-      matInput
-      [(ngModel)]="projectionData.withdrawalAge"
-      (keyup)="calc()"
-    />
-  </mat-form-field>
+    <mat-form-field class="formField">
+      <mat-label>Contribution Rate</mat-label>
+      <span matTextSuffix="">%&nbsp;</span>
+      <input
+        type="number"
+        matInput
+        [(ngModel)]="projectionData.contributionRate"
+        (keyup)="calc()"
+        placeholder="0"
+      />
+    </mat-form-field>
 
-  <mat-form-field class="formField">
-    <mat-label>Salary</mat-label>
-    <span matTextPrefix>$&nbsp;</span>
-    <input
-      type="number"
-      matInput
-      [(ngModel)]="projectionData.salary"
-      (keyup)="calc()"
-      placeholder="0"
-    />
-  </mat-form-field>
+    <mat-form-field class="formField">
+      <mat-label>Withdrawal Rate</mat-label>
+      <span matTextSuffix="">%&nbsp;</span>
+      <input
+        type="number"
+        matInput
+        [(ngModel)]="projectionData.withdrawalRate"
+        (keyup)="calc()"
+        placeholder="0"
+      />
+    </mat-form-field>
 
-  <mat-form-field class="formField">
-    <mat-label>Contribution Rate</mat-label>
-    <span matTextSuffix="">%&nbsp;</span>
-    <input
-      type="number"
-      matInput
-      [(ngModel)]="projectionData.contributionRate"
-      (keyup)="calc()"
-      placeholder="0"
-    />
-  </mat-form-field>
+    <mat-form-field class="formField">
+      <mat-label>Inflation Rate</mat-label>
+      <span matTextSuffix="">%&nbsp;</span>
+      <input
+        type="number"
+        matInput
+        [(ngModel)]="projectionData.inflationRate"
+        (keyup)="calc()"
+        placeholder="0"
+      />
+    </mat-form-field>
 
-  <mat-form-field class="formField">
-    <mat-label>Withdrawal Rate</mat-label>
-    <span matTextSuffix="">%&nbsp;</span>
-    <input
-      type="number"
-      matInput
-      [(ngModel)]="projectionData.withdrawalRate"
-      (keyup)="calc()"
-      placeholder="0"
-    />
-  </mat-form-field>
+    <mat-form-field class="formField">
+      <mat-label>Earnings</mat-label>
+      <span matTextSuffix="">%&nbsp;</span>
+      <input
+        type="number"
+        matInput
+        [(ngModel)]="projectionData.earnings"
+        (keyup)="calc()"
+        placeholder="0"
+    /></mat-form-field>
 
-  <mat-form-field class="formField">
-    <mat-label>Inflation Rate</mat-label>
-    <span matTextSuffix="">%&nbsp;</span>
-    <input
-      type="number"
-      matInput
-      [(ngModel)]="projectionData.inflationRate"
-      (keyup)="calc()"
-      placeholder="0"
-    />
-  </mat-form-field>
+    <mat-form-field class="formField">
+      <mat-label>Fees</mat-label>
+      <span matTextSuffix="">%&nbsp;</span>
+      <input
+        type="number"
+        matInput
+        [(ngModel)]="projectionData.fees"
+        (keyup)="calc()"
+        placeholder="0"
+      />
+    </mat-form-field>
 
-  <mat-form-field class="formField">
-    <mat-label>Earnings</mat-label>
-    <span matTextSuffix="">%&nbsp;</span>
-    <input
-      type="number"
-      matInput
-      [(ngModel)]="projectionData.earnings"
-      (keyup)="calc()"
-      placeholder="0"
-  /></mat-form-field>
-
-  <mat-form-field class="formField">
-    <mat-label>Fees</mat-label>
-    <span matTextSuffix="">%&nbsp;</span>
-    <input
-      type="number"
-      matInput
-      [(ngModel)]="projectionData.fees"
-      (keyup)="calc()"
-      placeholder="0"
-    />
-  </mat-form-field>
-
-  <mat-form-field class="formField">
-    <mat-label>Tax</mat-label>
-    <span matTextSuffix="">%&nbsp;</span>
-    <input
-      type="number"
-      matInput
-      matInput
-      [(ngModel)]="projectionData.tax"
-      (keyup)="calc()"
-      placeholder="0"
-    />
-  </mat-form-field>
-</div>
-<div class="container">
-  <app-table [data]="tableData"></app-table>
-  <app-line-chart [data]="tableData"></app-line-chart>
+    <mat-form-field class="formField">
+      <mat-label>Tax</mat-label>
+      <span matTextSuffix="">%&nbsp;</span>
+      <input
+        type="number"
+        matInput
+        matInput
+        [(ngModel)]="projectionData.tax"
+        (keyup)="calc()"
+        placeholder="0"
+      />
+    </mat-form-field>
+  </div>
+  <div class="container">
+    <app-table [data]="tableData"></app-table>
+    <app-line-chart [data]="tableData"></app-line-chart>
+  </div>
 </div>
