@@ -57,6 +57,7 @@ export class AppComponent {
     this.calc();
   }
 
+  //called after a keyup event on any input field, calculates all table and graph data
   calc() {
     this.tableData = {
       year: [],

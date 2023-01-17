@@ -29,6 +29,7 @@ export class LineChartComponent implements OnInit, OnChanges {
       endBalance: [],
     };
   }
+  //initializes the chart
   ngOnInit() {
     this.chart = new Chart('myChart', {
       type: 'line',
@@ -46,6 +47,7 @@ export class LineChartComponent implements OnInit, OnChanges {
       },
     });
   }
+  //updates the chart when data changes
   ngOnChanges(changes: SimpleChanges) {
     if (changes && !changes['data'].firstChange) {
       this.chart.data.labels = changes['data'].currentValue.year;

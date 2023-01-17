@@ -22,6 +22,7 @@ export class TableComponent implements OnChanges {
     };
   }
 
+  //adds blank cells if there is no data to display for visual purposes
   ngOnChanges(changes: SimpleChanges) {
     if (changes && changes['data']) {
       if (changes['data'].currentValue.year.length === 0) {
