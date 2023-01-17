@@ -1,9 +1,9 @@
-<mat-toolbar>
+<mat-toolbar color="primary">
   <span>Capital Balance Projection</span>
 </mat-toolbar>
 <div class="page-wrapper">
   <div class="inputs">
-    <mat-form-field class="formField">
+    <mat-form-field class="formField" appearance="outline">
       <mat-label>Current Age</mat-label>
       <input
         type="number"
@@ -14,7 +14,7 @@
       />
     </mat-form-field>
 
-    <mat-form-field class="formField">
+    <mat-form-field class="formField" appearance="outline">
       <mat-label>Withdrawal Age</mat-label>
       <input
         type="number"
@@ -23,7 +23,7 @@
         (keyup)="calc()"
       />
     </mat-form-field>
-    <mat-form-field class="formField">
+    <mat-form-field class="formField" appearance="outline">
       <mat-label>Start Balance</mat-label>
       <span matTextPrefix>$&nbsp;</span>
       <input
@@ -34,7 +34,7 @@
         placeholder="0"
       />
     </mat-form-field>
-    <mat-form-field class="formField">
+    <mat-form-field class="formField" appearance="outline">
       <mat-label>Salary</mat-label>
       <span matTextPrefix>$&nbsp;</span>
       <input
@@ -46,7 +46,7 @@
       />
     </mat-form-field>
 
-    <mat-form-field class="formField">
+    <mat-form-field class="formField" appearance="outline">
       <mat-label>Contribution Rate</mat-label>
       <span matTextSuffix="">%&nbsp;</span>
       <input
@@ -58,7 +58,7 @@
       />
     </mat-form-field>
 
-    <mat-form-field class="formField">
+    <mat-form-field class="formField" appearance="outline">
       <mat-label>Withdrawal Rate</mat-label>
       <span matTextSuffix="">%&nbsp;</span>
       <input
@@ -70,7 +70,7 @@
       />
     </mat-form-field>
 
-    <mat-form-field class="formField">
+    <mat-form-field class="formField" appearance="outline">
       <mat-label>Inflation Rate</mat-label>
       <span matTextSuffix="">%&nbsp;</span>
       <input
@@ -82,7 +82,7 @@
       />
     </mat-form-field>
 
-    <mat-form-field class="formField">
+    <mat-form-field class="formField" appearance="outline">
       <mat-label>Earnings</mat-label>
       <span matTextSuffix="">%&nbsp;</span>
       <input
@@ -93,7 +93,7 @@
         placeholder="0"
     /></mat-form-field>
 
-    <mat-form-field class="formField">
+    <mat-form-field class="formField" appearance="outline">
       <mat-label>Fees</mat-label>
       <span matTextSuffix="">%&nbsp;</span>
       <input
@@ -105,7 +105,7 @@
       />
     </mat-form-field>
 
-    <mat-form-field class="formField">
+    <mat-form-field class="formField" appearance="outline">
       <mat-label>Tax</mat-label>
       <span matTextSuffix="">%&nbsp;</span>
       <input

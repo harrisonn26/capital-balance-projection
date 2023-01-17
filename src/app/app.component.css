@@ -4,15 +4,16 @@
   min-width: 100%;
 }
 .container {
-  margin: 16px;
+  padding: 16px;
   width: calc(100% - 222px);
+  background-color: #f8f8f8;
 }
 .formField {
   margin: 0 8px 0 8px;
   width: calc(100% - 16px);
 }
 .inputs {
-  background-color: #ddd;
+  border-right: 1px solid #ccc;
   padding: 16px 8px 16px 8px;
   width: 200px;
   display: flex;
