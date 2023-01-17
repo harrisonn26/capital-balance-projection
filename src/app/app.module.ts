@@ -8,9 +8,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { TableComponent } from './table/table.component';
 import { DollarPipe } from './dollar.pipe';
+import { LineChartComponent } from './line-chart/line-chart.component';
 
 @NgModule({
-  declarations: [AppComponent, TableComponent, DollarPipe],
+  declarations: [AppComponent, TableComponent, DollarPipe, LineChartComponent],
   imports: [
     BrowserModule,
     FormsModule,

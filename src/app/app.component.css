@@ -1,3 +1,8 @@
+.container {
+  margin-left: 24px;
+  margin-right: 24px;
+  padding-bottom: 24px;
+}
 .formField {
   margin: 0 8px 0 8px;
   width: calc(10% - 16px);
